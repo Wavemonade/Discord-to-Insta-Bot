@@ -18,6 +18,7 @@ When Posting stuff it will use the discord username to show who created the post
 - If you want to change the discord role name that is used for verifying who can post, in **LINE 57** you can change it (role = discord.utils.get(ctx.guild.roles, name="NEW NAME"))
 - If you want to change the boilerplate caption "new post by {user}", in **Line 40** you can change it, the template is: 'caption' \n {boilerplate} {username}
 - you can change the discord statuses at **LINE 28** by adding or removing words in the **cycle([])** function
+- Prefix changes (ib-) can be done by changing **LINE 20** specifically: *command_prefix="PREFIX "*
 
 ## Possible changes
 - [ ] Use Different Python Libraries or FFMPEG to change different formats to supported formats *(PNG -> JPEG or WEBM -> MP4)*
