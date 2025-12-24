@@ -18,11 +18,6 @@ class Client(commands.Bot):
         intents = discord.Intents.default()
         intents.message_content = True
         super().__init__(command_prefix="ib- ",intents = intents,  help_command=None)
-    
-    async def setup_hook(self):
-        for filename in os.listdir('./cogs/'):
-            if filename.endswith(".py"):
-                await self.load_extension(f"cogs.{filename[:-3]}")
         
 dClient = discord.Client()
 status = cycle(["Prefix ib-","Instabot","Hello"])
@@ -124,5 +119,6 @@ async def post(ctx,*, message:str):
             await ctx.send("new Album on Instagram by "+ctx.message.author.name)
     finally:                
         alreadyUploading = False
+
 
 dClient.run("TOKEN")
